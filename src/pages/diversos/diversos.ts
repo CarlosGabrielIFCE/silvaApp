@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ActionSheetController, ToastController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
 import { DetailPage } from '../detail/detail';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the DiversosPage page.
@@ -37,7 +38,7 @@ export class DiversosPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DiversosPage');
+    console.log('ionViewDidLoad ContasPage');
   }
 
   deleteRegister(id) {
@@ -55,7 +56,7 @@ export class DiversosPage {
                   duration: 3000,
                 })
                 toast.present();
-                this.ionViewDidLoad();
+                this.navCtrl.push(HomePage);
               })
           }
         },

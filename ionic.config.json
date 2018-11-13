@@ -1,6 +1,6 @@
 {
   "name": "silvaApp",
-  "app_id": "",
+  "app_id": "9a4e2469",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}

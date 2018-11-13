@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Detalhe do Registro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img style="width: 500px" *ngIf="register.type=='Diversos'" src="https://www.criptomoedasfacil.com/wp-content/uploads/2018/07/pacote-brasileiro-do-dinheiro-com-e-notas-dos-reais-87745678.jpg"/>
+        <img style="width: 500px" *ngIf="register.type=='Conta'" src="https://contaum.com.br/wp-content/uploads/2018/03/credit-cards-picture-id486937322.jpg"/>
+      
+        <ion-card-content>
+          <ion-card-title>
+            Tipo: <strong>{{register.type}}</strong>
+            </ion-card-title>
+          <p>
+            Valor: R$ {{register.value}}
+          </p>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

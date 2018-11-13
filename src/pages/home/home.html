@@ -1,18 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary" hideBackButton>
+    <ion-title>Silva's App</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
+<ion-content class="card-background-page" padding>
+  <button ion-button full color="primary" (click)="gerarFatura()">Gerar Fatura</button>
+  <ion-list>
+    <ion-card (click)="goToContas()">
+      <img src="https://contaum.com.br/wp-content/uploads/2018/03/credit-cards-picture-id486937322.jpg"/>
+      <div class="card-title">Contas</div>
+    </ion-card>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+    <ion-card (click)="goToDiversos()">
+      
+      <img src="https://www.altoastral.com.br/wp-content/uploads/2017/01/dinheiro-notas-750x499.jpg"/>
+      <div class="card-title">Diversos</div>
+    </ion-card>
+    
+  </ion-list>
+  <ion-fab right bottom>
+      <button ion-fab color="primary" (click)="createRegister()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+  
 </ion-content>

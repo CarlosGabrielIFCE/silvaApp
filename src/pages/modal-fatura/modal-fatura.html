@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar color="primary" >
+    <ion-title>Fatura do mês</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 style="text-align: center;">Valor total gasto</h1>
+  <h2 style="text-align: center">R$ {{fatura}}</h2>
+  <h3 style="text-align: center">Valor gasto com contas</h3>
+  <h4 style="text-align: center">R$ {{conta}}</h4>
+  <h3 style="text-align: center">Valor gasto com diversos</h3>
+  <h4 style="text-align: center">R$ {{diversos}}</h4>
+  <h1 style="text-align: center;">Salário atual</h1>
+  <h2 style="text-align: center">R$ {{salario}}</h2>
+  <img *ngIf="boolean" src="http://s2.glbimg.com/tGJ6jSVny6t5twUhRIznQITzqJk=/620x465/s.glbimg.com/jo/g1/f/original/2016/04/28/griest2.jpg">
+  <img *ngIf="!boolean" src="https://static.tudointeressante.com.br/uploads/2013/11/fotos-emocionantes-4.jpg" >
+  <h2 *ngIf="boolean" style="text-align: center">Você administra bem seu salário, continue assim!</h2>
+  <h2 *ngIf="!boolean" style="text-align: center">Você precisa administrar melhor seu salário!</h2>
+  <button ion-button color="primary" full (click)="backHome()">Voltar ao Início</button>
+</ion-content>

@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Registros de Contas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="card-background-page">
+    <ion-list>
+      <ion-card *ngFor="let register of registers" (press)="deleteRegister(register.id)" (click)="goToDetail(register.id)">
+        <img *ngIf="register.type=='Conta'" src="https://contaum.com.br/wp-content/uploads/2018/03/credit-cards-picture-id486937322.jpg"/>
+        <div class="card-title">Conta</div>
+        <div class="card-subtitle">Valor: R${{register.value}}</div>
+      </ion-card> 
+    </ion-list>
+  </ion-content>

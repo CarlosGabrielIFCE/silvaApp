@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Cadastrar fatura</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select [(ngModel)]="register.type">
+        <ion-option required *ngFor="let type of paymentType">{{type.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Valor</ion-label>
+      <ion-input type="text" [(ngModel)]="register.value"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button full color="primary" (click)="saveRegister(register)">Salvar</button>
+</ion-content>

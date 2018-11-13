@@ -1,0 +1,19 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+      <ion-title>Registros de Diversos</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="card-background-page">
+      <ion-list>
+        <ion-card *ngFor="let register of registers" (press)="deleteRegister(register.id)" (click)="goToDetail(register.id)">
+          <img *ngIf="register.type=='Diversos'" src="https://www.criptomoedasfacil.com/wp-content/uploads/2018/07/pacote-brasileiro-do-dinheiro-com-e-notas-dos-reais-87745678.jpg"/>
+          <div class="card-title">Diversos</div>
+          <div class="card-subtitle">Valor: R${{register.value}}</div>
+        </ion-card> 
+      </ion-list>
+    </ion-content>
+  

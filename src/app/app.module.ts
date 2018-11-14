@@ -16,6 +16,7 @@ import { CreateRegisterPage } from '../pages/create-register/create-register';
 import { ContasPage } from '../pages/contas/contas';
 import { DiversosPage } from '../pages/diversos/diversos';
 import { ModalFaturaPage } from '../pages/modal-fatura/modal-fatura';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -33,6 +34,7 @@ import { ModalFaturaPage } from '../pages/modal-fatura/modal-fatura';
     HttpClientModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -48,7 +50,7 @@ import { ModalFaturaPage } from '../pages/modal-fatura/modal-fatura';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    HttpServiceProvider
+    HttpServiceProvider,
   ]
 })
 export class AppModule {}

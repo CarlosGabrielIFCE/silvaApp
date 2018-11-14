@@ -1,7 +1,11 @@
+//Modules
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { HttpServiceProvider } from '../../providers/http-service/http-service';
 import { HttpClient } from '@angular/common/http';
+import { LoadingController } from 'ionic-angular';
+
+//Pages
 import { DetailPage } from '../detail/detail';
 import { ContasPage } from '../contas/contas';
 import { DiversosPage } from '../diversos/diversos';
@@ -22,8 +26,10 @@ export class HomePage {
   constructor(public navCtrl: NavController,
               public httpService: HttpServiceProvider,
               public http: HttpClient,
-              public modalCtrl: ModalController) {
-
+              public modalCtrl: ModalController,
+              public loadingCtrl: LoadingController) {
+                
+                this.presentLoading();
                 this.http.get(this.url + "register")
                 .subscribe(data => {
                   this.registers = data;
@@ -36,6 +42,15 @@ export class HomePage {
                     }
                   }
                 })  
+  }
+
+  //Present Loading
+  presentLoading() {
+    const loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
   }
 
   goToContas() {
